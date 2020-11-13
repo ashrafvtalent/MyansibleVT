@@ -1,19 +1,16 @@
 ---
-- StudentDetails:
-  - name:
-    phno:
-    course:
-    email:
+- StudentDeatils: 
+  - name: anudeep
+    phno: 89898989898
+    course: devops
+    email: anudeep@gmail.com
 
-  - name:
-    phno:
-    course:
-    email:
-  - name:
-    phno:
-    course:
-    email:
-  - name:
-    phno:
-    course:
-    email:
+  - name: manikanta
+    phno: 797979988
+    course: devops
+    email: manikanta@gmail.com
+    
+  - name: pallavi
+    phno: 26262626222
+    course: devops
+    email: pallavi@gmail.com
