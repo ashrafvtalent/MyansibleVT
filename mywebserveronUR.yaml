@@ -4,7 +4,7 @@
   tasks:
   - name: 
     apt:
-      name: i want install my webserver on ubuntu16
+      name: i want to install my webserver on ubuntu16
       state: present
     when: ansible_os_family =="Debian"
   - name: i want restart my webserver on ubuntu16
