@@ -1,0 +1,21 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: install  multi packages on ubuntu16
+    apt:
+      name: "{{ item }}"
+    loop:
+      - git
+      - tree
+      - wget
+    when: ansible_os_family =="Debian"
+    
+  - name: install multi packages on redhat
+    yum:
+      name: "{{ item }}"
+    loop:
+      - git
+      - tree
+      - wget
+    when: ansible_os_family =="RedHat"
