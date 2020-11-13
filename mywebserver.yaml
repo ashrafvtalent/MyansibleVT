@@ -10,3 +10,7 @@
     apt:
      name: tree
      state: present
+  - name: i want to install git on ubuntu16
+    apt:
+      name: git
+      state: absent
