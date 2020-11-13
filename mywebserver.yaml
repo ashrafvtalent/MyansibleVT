@@ -14,3 +14,6 @@
     apt:
       name: git
       state: absent
+  - name: i want to install wget 
+    apt:
+      name: wget
