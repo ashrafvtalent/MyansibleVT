@@ -1,0 +1,8 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: iwant webserver on ubuntu
+    apt: 
+     name: apache2
+    state: present

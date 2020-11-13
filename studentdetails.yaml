@@ -1,0 +1,19 @@
+---
+- StudentDetails:
+  - name:
+    phno:
+    course:
+    email:
+
+  - name:
+    phno:
+    course:
+    email:
+  - name:
+    phno:
+    course:
+    email:
+  - name:
+    phno:
+    course:
+    email:
