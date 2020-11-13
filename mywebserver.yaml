@@ -1,8 +1,12 @@
 ---
 - hosts: all
   become: yes
-  tasks:
-  - name: iwant webserver on ubuntu
-    apt: 
-     name: apache2
+  tasks: 
+  - name: i want to install webserver on ubuntu16
+    apt:
+      name: apache2
+      state: present
+  - name: i want to install tree on ubuntu16
+    apt:
+     name: tree
      state: present
