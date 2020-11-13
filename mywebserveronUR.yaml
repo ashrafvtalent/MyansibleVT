@@ -2,9 +2,9 @@
 - hosts: all
   become: yes
   tasks:
-  - name: 
+  - name: i want to install my webserver on ubuntu16
     apt:
-      name: i want to install my webserver on ubuntu16
+      name: apache2
       state: present
     when: ansible_os_family =="Debian"
   - name: i want restart my webserver on ubuntu16
