@@ -1,0 +1,40 @@
+---
+- hosts: AnsibleSlave
+  become: yes
+- tasks:
+    - name: Install MySQL repository
+      apt:
+          name: "https://dev.mysql.com/get/mysql80-community-release-el7-1.noarch.rpm"
+          state: present
+          update_cache: yes
+    - name: Install MySQL packages
+      apt:
+          name: "{{ packages }}"
+          state: present
+          update_cache: yes
+      vars:
+        packages:
+          - mysql-community-server
+          - mysql-community-client
+          - python-mysqldb
+    - name: Enable the MySQL service
+      service:
+          name: mysqld
+          state: started
+          enabled: true    
+    - name: Create the MySQL ashu user
+      shell: "mysql -e \"CREATE USER 'ashu'@'{{ item }}' IDENTIFIED BY 
+         'ashraf'; GRANT ALL PRIVILEGES ON *.* TO 
+         'tungsten'@'{{item}}' WITH GRANT OPTION;\" 
+         -uroot -p'12345';
+          CREATE DATABASE MyDB;
+          USE MyDB"
+      with_items:
+          - ::1
+          - 127.0.0.1
+          - localhost
+          - "%"
+
+
+
+
